@@ -566,6 +566,7 @@ ul, ol {
   gap: 1.5rem;
 }
 
+.follow-strip-text h2,
 .follow-strip-text h3 {
   font-family: var(--font-headline);
   font-weight: 700;
@@ -744,6 +745,7 @@ ul, ol {
   transform: translateY(-2px);
 }
 
+.contact-card h2,
 .contact-card h3 {
   font-family: var(--font-headline);
   font-weight: 600;
