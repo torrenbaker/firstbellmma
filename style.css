@@ -1,21 +1,22 @@
 /* ============================================
-   FIRST BELL MMA — Design System
+   FIRST BELL MMA — Design System (Gold)
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg-base: #0A0A0A;
-  --bg-surface: #111111;
-  --bg-elevated: #1A1A1A;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.15);
-  --text-primary: #F2F2F2;
-  --text-secondary: #999999;
-  --text-tertiary: #5A5A5A;
-  --red: #E8283B;
-  --red-dim: rgba(232, 40, 59, 0.1);
-  --red-glow: rgba(232, 40, 59, 0.15);
+  --bg-base: #0D0D0D;
+  --bg-surface: #141414;
+  --bg-elevated: #1C1C1C;
+  --border: rgba(201, 168, 76, 0.1);
+  --border-hover: rgba(201, 168, 76, 0.25);
+  --text-primary: #F2F0EB;
+  --text-secondary: #9A9590;
+  --text-tertiary: #5C5854;
+  --gold: #C9A84C;
+  --gold-light: #D4B96A;
+  --gold-dim: rgba(201, 168, 76, 0.08);
+  --gold-glow: rgba(201, 168, 76, 0.12);
   --font-headline: 'Barlow Condensed', sans-serif;
   --font-body: 'DM Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
@@ -87,7 +88,7 @@ ul, ol {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(13, 13, 13, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -95,7 +96,7 @@ ul, ol {
 }
 
 .nav.scrolled {
-  background: rgba(10, 10, 10, 0.95);
+  background: rgba(13, 13, 13, 0.95);
 }
 
 .nav-inner {
@@ -108,27 +109,29 @@ ul, ol {
   justify-content: space-between;
 }
 
-.nav-brand {
+.nav-logo {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-.nav-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--red);
-  flex-shrink: 0;
+.nav-logo-img {
+  height: 32px;
+  width: auto;
 }
 
-.nav-brand span {
+.nav-logo .wordmark {
   font-family: var(--font-headline);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  transition: color 0.2s ease;
+}
+
+.nav-logo:hover .wordmark {
+  color: var(--gold-light);
 }
 
 .nav-links {
@@ -165,7 +168,7 @@ ul, ol {
 }
 
 .nav-socials a:hover {
-  color: var(--red);
+  color: var(--gold);
 }
 
 /* Hamburger */
@@ -193,7 +196,7 @@ ul, ol {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(10, 10, 10, 0.97);
+  background: rgba(13, 13, 13, 0.97);
   z-index: 999;
   flex-direction: column;
   align-items: center;
@@ -215,7 +218,7 @@ ul, ol {
 }
 
 .nav-overlay a:hover {
-  color: var(--red);
+  color: var(--gold);
 }
 
 .nav-overlay-close {
@@ -238,7 +241,7 @@ ul, ol {
   padding: 10rem 2rem 7rem;
   text-align: center;
   position: relative;
-  background: radial-gradient(ellipse at 50% 40%, rgba(232, 40, 59, 0.03) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 40%, rgba(201, 168, 76, 0.03) 0%, transparent 70%);
 }
 
 .hero-label {
@@ -247,7 +250,7 @@ ul, ol {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--red);
+  color: var(--gold);
   margin-bottom: 1.5rem;
 }
 
@@ -284,7 +287,7 @@ ul, ol {
 .hero-divider {
   width: 60px;
   height: 3px;
-  background: var(--red);
+  background: var(--gold);
   margin: 5rem auto 0;
 }
 
@@ -307,23 +310,23 @@ ul, ol {
 }
 
 .btn--primary {
-  background: var(--red);
-  color: #fff;
+  background: var(--gold);
+  color: var(--bg-base);
 }
 
 .btn--primary:hover {
-  background: #d02233;
+  background: var(--gold-light);
 }
 
 .btn--outline {
   background: transparent;
-  border: 1px solid var(--red);
-  color: var(--red);
+  border: 1px solid var(--gold);
+  color: var(--gold);
 }
 
 .btn--outline:hover {
-  background: var(--red);
-  color: #fff;
+  background: var(--gold);
+  color: var(--bg-base);
 }
 
 .btn--small {
@@ -338,8 +341,8 @@ ul, ol {
 }
 
 .btn--surface:hover {
-  border-color: var(--red);
-  color: var(--red);
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 /* ============================================
@@ -352,6 +355,13 @@ ul, ol {
   text-align: center;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+}
+
+.brand-strip-logo {
+  height: 100px;
+  width: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
 }
 
 .brand-strip-name {
@@ -393,7 +403,7 @@ ul, ol {
   align-items: baseline;
   justify-content: space-between;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--gold);
   margin-bottom: 2.5rem;
 }
 
@@ -420,7 +430,7 @@ ul, ol {
 }
 
 .section-link:hover {
-  color: var(--red);
+  color: var(--gold);
 }
 
 .section-link .arrow {
@@ -508,7 +518,7 @@ ul, ol {
   font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--red);
+  color: var(--gold);
   margin-bottom: 0.5rem;
 }
 
@@ -627,8 +637,8 @@ ul, ol {
   font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  background: var(--red-dim);
-  color: var(--red);
+  background: var(--gold-dim);
+  color: var(--gold);
   padding: 0.3rem 0.7rem;
   border-radius: 20px;
 }
@@ -661,7 +671,7 @@ ul, ol {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  border: 2px solid rgba(232, 40, 59, 0.25);
+  border: 2px solid rgba(201, 168, 76, 0.25);
   margin-bottom: 1.25rem;
 }
 
@@ -672,7 +682,7 @@ ul, ol {
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: 0.85rem;
-  color: var(--red);
+  color: var(--gold);
 }
 
 .team-avatar {
@@ -693,7 +703,7 @@ ul, ol {
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--red);
+  color: var(--gold);
   margin-bottom: 0.75rem;
 }
 
@@ -752,12 +762,12 @@ ul, ol {
 .contact-card a {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  color: var(--red);
-  transition: opacity 0.2s ease;
+  color: var(--gold);
+  transition: color 0.2s ease;
 }
 
 .contact-card a:hover {
-  opacity: 0.8;
+  color: var(--gold-light);
 }
 
 /* ============================================
@@ -798,7 +808,7 @@ ul, ol {
 }
 
 .footer-links a:hover {
-  color: var(--red);
+  color: var(--gold);
 }
 
 /* ============================================
@@ -826,7 +836,7 @@ ul, ol {
   align-items: baseline;
   justify-content: space-between;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--gold);
   margin-bottom: 2.5rem;
 }
 
@@ -850,7 +860,7 @@ ul, ol {
   font-weight: 600;
   font-size: 1.15rem;
   text-transform: uppercase;
-  color: var(--text-primary);
+  color: var(--gold);
   margin-bottom: 0.75rem;
 }
 
@@ -952,5 +962,9 @@ ul, ol {
 
   .brand-strip-name {
     font-size: clamp(2rem, 10vw, 4rem);
+  }
+
+  .nav-logo-img {
+    height: 26px;
   }
 }
