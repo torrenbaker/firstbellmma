@@ -656,11 +656,16 @@ ul, ol {
   transform: translateY(-2px);
 }
 
-.team-initials {
+.team-initials,
+.team-avatar {
   width: 52px;
   height: 52px;
   border-radius: 50%;
   border: 2px solid rgba(232, 40, 59, 0.25);
+  margin-bottom: 1.25rem;
+}
+
+.team-initials {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -668,7 +673,10 @@ ul, ol {
   font-weight: 500;
   font-size: 0.85rem;
   color: var(--red);
-  margin-bottom: 1.25rem;
+}
+
+.team-avatar {
+  object-fit: cover;
 }
 
 .team-card h3 {
