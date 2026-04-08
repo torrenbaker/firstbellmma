@@ -4,68 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — First Bell MMA</title>
+  <meta name="description" content="Get in touch with First Bell MMA. Press credentials, fighter features, and coverage inquiries.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23E8283B'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='12' fill='%23C41E3A'/></svg>">
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <span class="bell"></span>
-      <span class="wordmark">First Bell MMA</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html#interviews">Interviews</a></li>
-      <li><a href="index.html#events">Events</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-dot"></div>
+        <span>First Bell MMA</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#interviews">Interviews</a>
+        <a href="index.html#events">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-socials">
+        <a href="https://youtube.com/@firstbellmma" target="_blank" rel="noopener">YT</a>
+        <a href="https://instagram.com/firstbellmma" target="_blank" rel="noopener">IG</a>
+        <a href="https://tiktok.com/@firstbellmma" target="_blank" rel="noopener">TT</a>
+        <a href="https://x.com/firstbellmma" target="_blank" rel="noopener">X</a>
+      </div>
+      <button class="nav-toggle" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="nav-overlay" id="mobileNav">
+    <button class="nav-overlay-close" onclick="document.getElementById('mobileNav').classList.remove('open')" aria-label="Close menu">&times;</button>
+    <a href="index.html#interviews" onclick="document.getElementById('mobileNav').classList.remove('open')">Interviews</a>
+    <a href="index.html#events" onclick="document.getElementById('mobileNav').classList.remove('open')">Events</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
-</nav>
 
-<section class="contact-section">
-  <a href="index.html" class="legal-back">&larr; Home</a>
-  <h2>Contact</h2>
-  <p class="contact-sub">Press credentials, coverage inquiries, and fighter features.</p>
-
-  <div class="contact-grid">
-    <div class="contact-item">
-      <h3>General Inquiries</h3>
-      <p>Partnerships, press, and collaboration.</p>
-      <a href="mailto:hello@firstbellmma.com">hello@firstbellmma.com</a>
-    </div>
-
-    <div class="contact-item">
-      <h3>Fighter Features</h3>
-      <p>Want to be interviewed or covered?</p>
-      <a href="mailto:fighters@firstbellmma.com">fighters@firstbellmma.com</a>
-    </div>
-
-    <div class="contact-item">
-      <h3>Press Credentials</h3>
-      <p>Requesting media access to events.</p>
-      <a href="mailto:press@firstbellmma.com">press@firstbellmma.com</a>
-    </div>
-
-    <div class="contact-item">
-      <h3>Follow Us</h3>
-      <p>New content every week.</p>
-      <a href="#">YouTube &middot; Instagram &middot; TikTok &middot; X</a>
+  <!-- CONTACT -->
+  <div class="page-content">
+    <div class="container--narrow">
+      <div class="page-header reveal">
+        <h1 class="page-title">Get in Touch</h1>
+      </div>
+      <p class="contact-intro reveal">Press credentials, fighter features, and coverage inquiries.</p>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>General Inquiries</h3>
+          <p>Partnerships, press, and collaboration.</p>
+          <a href="mailto:hello@firstbellmma.com">hello@firstbellmma.com</a>
+        </div>
+        <div class="contact-card reveal">
+          <h3>Fighter Features</h3>
+          <p>Want to be interviewed or know someone who should be?</p>
+          <a href="mailto:fighters@firstbellmma.com">fighters@firstbellmma.com</a>
+        </div>
+        <div class="contact-card reveal">
+          <h3>Press Credentials</h3>
+          <p>Requesting media access to events.</p>
+          <a href="mailto:press@firstbellmma.com">press@firstbellmma.com</a>
+        </div>
+        <div class="contact-card reveal">
+          <h3>Follow Us</h3>
+          <p>New content every week.</p>
+          <a href="https://youtube.com/@firstbellmma" target="_blank" rel="noopener">YouTube</a> &middot;
+          <a href="https://instagram.com/firstbellmma" target="_blank" rel="noopener">Instagram</a> &middot;
+          <a href="https://tiktok.com/@firstbellmma" target="_blank" rel="noopener">TikTok</a> &middot;
+          <a href="https://x.com/firstbellmma" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-copy">&copy; 2026 First Bell MMA</div>
-    <ul class="footer-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-    </ul>
-  </div>
-</footer>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-copy">&copy; 2026 First Bell MMA</div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
 
 </body>
 </html>
