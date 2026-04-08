@@ -658,8 +658,8 @@ ul, ol {
 
 .team-initials,
 .team-avatar {
-  width: 52px;
-  height: 52px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   border: 2px solid rgba(232, 40, 59, 0.25);
   margin-bottom: 1.25rem;
