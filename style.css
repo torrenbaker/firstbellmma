@@ -118,7 +118,6 @@ ul, ol {
 .nav-logo-img {
   height: 32px;
   width: auto;
-  mix-blend-mode: lighten;
 }
 
 .nav-logo .wordmark {
@@ -391,7 +390,6 @@ ul, ol {
   width: auto;
   margin: 0 auto 1.5rem;
   display: block;
-  mix-blend-mode: lighten;
 }
 
 .brand-strip-name {
