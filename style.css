@@ -2,7 +2,7 @@
    FIRST BELL MMA — Design System (Gold)
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
   --bg-base: #0D0D0D;
@@ -118,6 +118,7 @@ ul, ol {
 .nav-logo-img {
   height: 32px;
   width: auto;
+  mix-blend-mode: lighten;
 }
 
 .nav-logo .wordmark {
@@ -159,16 +160,20 @@ ul, ol {
 }
 
 .nav-socials a {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
 }
 
-.nav-socials a:hover {
-  color: var(--gold);
+.nav-socials a svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--text-tertiary);
+  transition: fill 0.2s ease;
+}
+
+.nav-socials a:hover svg {
+  fill: var(--gold);
 }
 
 /* Hamburger */
@@ -346,6 +351,30 @@ ul, ol {
 }
 
 /* ============================================
+   MISSION SECTION
+   ============================================ */
+
+.mission-section {
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.mission-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-inner p {
+  font-family: var(--font-headline);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ============================================
    BRAND STRIP
    ============================================ */
 
@@ -362,6 +391,7 @@ ul, ol {
   width: auto;
   margin: 0 auto 1.5rem;
   display: block;
+  mix-blend-mode: lighten;
 }
 
 .brand-strip-name {
@@ -545,6 +575,161 @@ ul, ol {
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+/* ============================================
+   FIGHT WEEK
+   ============================================ */
+
+.fightweek-section {
+  padding: 6rem 2rem;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.fightweek-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  background: var(--gold-dim);
+  color: var(--gold);
+}
+
+.fightweek-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.fightweek-event-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.fightweek-event-name {
+  font-family: var(--font-headline);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.fightweek-event-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.5px;
+}
+
+.fight-row {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.fight-row:last-child {
+  border-bottom: none;
+}
+
+.fight-row:hover {
+  background: var(--bg-elevated);
+}
+
+.fight-weight {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.fight-matchup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fighter-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fighter-name {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.fighter-odds {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.fighter-odds.favorite {
+  color: var(--gold);
+  background: var(--gold-dim);
+}
+
+.fighter-odds.underdog {
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.fb-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  background: var(--gold);
+  color: var(--bg-base);
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.fightweek-footer {
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.odds-source {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.3px;
+}
+
+.fb-badge-legend {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
 }
 
 /* ============================================
@@ -945,6 +1130,20 @@ ul, ol {
   .event-row {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+
+  .fight-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .fight-weight {
+    margin-bottom: 0.5rem;
+  }
+
+  .fightweek-footer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .follow-strip-inner {
